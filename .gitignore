@@ -1,0 +1,15 @@
+a.out
+*.o
+*.out
+rough*
+test
+.vscode
+.clang-format
+*.replace
+
+claptrap
+serena
+repetitive
+weird
+
+README.md
