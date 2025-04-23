@@ -1,6 +1,6 @@
 #include "ClapTrap.h"
 
-ClapTrap::ClapTrap() : ClapTrap( "noName" ) {
+ClapTrap::ClapTrap() : ClapTrap{ "noName" } {
     std::cout << "Default constructor called (ClapTrap class)" << '\n';
 }
 
@@ -32,12 +32,19 @@ ClapTrap::~ClapTrap() {
     std::cout << "Destructor called (ClapTrap class)" << '\n';
 }
 
+ClapTrap::ClapTrap( const std::string& initName, unsigned int initHitPoints, unsigned int initEnergyPoints,
+                    unsigned int initAttackDamage )
+    : mName{ initName }, mHitPoints{ initHitPoints }, mEnergyPoints{ initEnergyPoints },
+      mAttackDamage{ mAttackDamage } {
+    std::cout << "Protected constructor called (ClapTrap class)" << '\n';
+}
+
 void ClapTrap::attack( const std::string& target ) {
     if ( mHitPoints < 1 ) {
         std::cout << "ClapTrap " << mName << " cannot attack because it is out of hit points" << '\n';
         return;
     } else if ( mEnergyPoints < 1 ) {
-        std::cout << "ClapTrap" << mName << "cannot attack because it is out of energy points" << '\n';
+        std::cout << "ClapTrap " << mName << "cannot attack because it is out of energy points" << '\n';
         return;
     }
 
@@ -63,7 +70,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 
 void ClapTrap::beRepaired( unsigned int amount ) {
     if ( mEnergyPoints < 1 ) {
-        std::cout << "ClapTrap" << mName << "cannot be repaired because it is out of energy points" << '\n';
+        std::cout << "ClapTrap " << mName << "cannot be repaired because it is out of energy points" << '\n';
         return;
     }
 

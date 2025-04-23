@@ -2,6 +2,8 @@
 #define SCAVTRAP_H
 
 #include "ClapTrap.h"
+#include <string>
+#include <iostream>
 
 class ScavTrap : public ClapTrap {
   public:
@@ -9,7 +11,7 @@ class ScavTrap : public ClapTrap {
     ScavTrap( const std::string& initName );
     ScavTrap( const ScavTrap& scavtrap );
     ScavTrap& operator=( const ScavTrap& scavtrap );
-    ~ScavTrap();
+    virtual ~ScavTrap() override;
 
     void guardGate();
 };

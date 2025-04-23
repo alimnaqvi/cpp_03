@@ -10,13 +10,17 @@ class ClapTrap {
     ClapTrap( const std::string& initName );
     ClapTrap( const ClapTrap& claptrap );
     ClapTrap& operator=( const ClapTrap& claptrap );
-    ~ClapTrap();
+    virtual ~ClapTrap();
 
     void attack( const std::string& target );
     void takeDamage( unsigned int amount );
     void beRepaired( unsigned int amount );
 
     unsigned int getAttackDamage();
+
+  protected:
+    ClapTrap( const std::string& initName, unsigned int initHitPoints, unsigned int initEnergyPoints,
+              unsigned int initAttackDamage );
 
   private:
     std::string  mName;

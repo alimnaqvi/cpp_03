@@ -1,6 +1,6 @@
 #include "ClapTrap.h"
 
-ClapTrap::ClapTrap() : ClapTrap( "noName" ) {
+ClapTrap::ClapTrap() : ClapTrap{ "noName" } {
     std::cout << "Default constructor called" << '\n';
 }
 
