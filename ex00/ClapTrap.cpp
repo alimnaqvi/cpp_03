@@ -4,12 +4,12 @@ ClapTrap::ClapTrap() : ClapTrap( "noName" ) {
     std::cout << "Default constructor called" << '\n';
 }
 
-ClapTrap::ClapTrap( std::string initName )
+ClapTrap::ClapTrap( const std::string& initName )
     : mName{ initName }, mHitPoints{ 10 }, mEnergyPoints{ 10 }, mAttackDamage{ 0 } {
     std::cout << "String constructor called" << '\n';
 }
 
-ClapTrap::ClapTrap( ClapTrap& claptrap )
+ClapTrap::ClapTrap( const ClapTrap& claptrap )
     : mName{ claptrap.mName }, mHitPoints{ claptrap.mHitPoints }, mEnergyPoints{ claptrap.mEnergyPoints },
       mAttackDamage{ claptrap.mAttackDamage } {
     std::cout << "Copy constructor called" << '\n';
