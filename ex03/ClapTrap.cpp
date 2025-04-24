@@ -92,6 +92,7 @@ unsigned int ClapTrap::getAttackDamage() {
     return mAttackDamage;
 }
 
+
 const std::string& ClapTrap::getName() {
     return mName;
 }

@@ -80,12 +80,16 @@ void ClapTrap::beRepaired( unsigned int amount ) {
               << " hit points!" << '\n';
 }
 
-unsigned int ClapTrap::getAttackDamage() {
-    return mAttackDamage;
-}
-
 unsigned int ClapTrap::getHitPoints() {
     return mHitPoints;
+}
+
+unsigned int ClapTrap::getEnergyPoints() {
+    return mEnergyPoints;
+}
+
+unsigned int ClapTrap::getAttackDamage() {
+    return mAttackDamage;
 }
 
 const std::string& ClapTrap::getName() {
