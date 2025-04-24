@@ -32,8 +32,8 @@ DiamondTrap::~DiamondTrap() {
     std::cout << "Destructor called. Class: DiamondTrap. Object: " << mName << '\n';
 }
 
-void attack( const std::string& target ) {
-    ScavTrap::attack(target);
+void DiamondTrap::attack( const std::string& target ) {
+    ScavTrap::attack( target );
 }
 
 void DiamondTrap::whoAmI() {

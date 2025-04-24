@@ -8,7 +8,7 @@ int main() {
     DiamondTrap shiny{ "Shiny" };
 
     shiny.whoAmI();
-    shiny.attack("somebody");
+    shiny.attack( "somebody" );
     shiny.guardGate();
     shiny.highFivesGuys();
 

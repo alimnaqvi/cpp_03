@@ -70,7 +70,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 
 void ClapTrap::beRepaired( unsigned int amount ) {
     if ( mEnergyPoints < 1 ) {
-        std::cout << "ClapTrap " << mName << "cannot be repaired because it is out of energy points" << '\n';
+        std::cout << "ClapTrap " << mName << " cannot be repaired because it is out of energy points" << '\n';
         return;
     }
 
@@ -91,7 +91,6 @@ unsigned int ClapTrap::getEnergyPoints() {
 unsigned int ClapTrap::getAttackDamage() {
     return mAttackDamage;
 }
-
 
 const std::string& ClapTrap::getName() {
     return mName;

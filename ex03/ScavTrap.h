@@ -12,7 +12,7 @@ class ScavTrap : virtual public ClapTrap {
     ScavTrap( const ScavTrap& scavtrap );
     ScavTrap& operator=( const ScavTrap& scavtrap );
     virtual ~ScavTrap() override;
-  
+
     void guardGate();
 
   private:
