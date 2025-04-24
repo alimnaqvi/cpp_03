@@ -34,10 +34,10 @@ ClapTrap::~ClapTrap() {
 
 void ClapTrap::attack( const std::string& target ) {
     if ( mHitPoints < 1 ) {
-        std::cout << "ClapTrap " << mName << " cannot attack because it is out of hit points" << '\n';
+        std::cout << "ClapTrap " << mName << " cannot attack because it is dead (out of hit points)!" << '\n';
         return;
     } else if ( mEnergyPoints < 1 ) {
-        std::cout << "ClapTrap" << mName << "cannot attack because it is out of energy points" << '\n';
+        std::cout << "ClapTrap " << mName << "cannot attack because it is out of energy points" << '\n';
         return;
     }
 
@@ -63,7 +63,7 @@ void ClapTrap::takeDamage( unsigned int amount ) {
 
 void ClapTrap::beRepaired( unsigned int amount ) {
     if ( mEnergyPoints < 1 ) {
-        std::cout << "ClapTrap" << mName << "cannot be repaired because it is out of energy points" << '\n';
+        std::cout << "ClapTrap " << mName << "cannot be repaired because it is out of energy points" << '\n';
         return;
     }
 

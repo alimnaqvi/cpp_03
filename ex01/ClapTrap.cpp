@@ -1,22 +1,22 @@
 #include "ClapTrap.h"
 
 ClapTrap::ClapTrap() : ClapTrap{ "noName" } {
-    std::cout << "Default constructor called (ClapTrap class)" << '\n';
+    std::cout << "Default constructor called. Class: ClapTrap. Object: " << mName << '\n';
 }
 
 ClapTrap::ClapTrap( const std::string& initName )
     : mName{ initName }, mHitPoints{ 10 }, mEnergyPoints{ 10 }, mAttackDamage{ 0 } {
-    std::cout << "String constructor called (ClapTrap class)" << '\n';
+    std::cout << "String constructor called. Class: ClapTrap. Object: " << mName << '\n';
 }
 
 ClapTrap::ClapTrap( const ClapTrap& claptrap )
     : mName{ claptrap.mName }, mHitPoints{ claptrap.mHitPoints }, mEnergyPoints{ claptrap.mEnergyPoints },
       mAttackDamage{ claptrap.mAttackDamage } {
-    std::cout << "Copy constructor called (ClapTrap class)" << '\n';
+    std::cout << "Copy constructor called. Class: ClapTrap. Object: " << mName << '\n';
 }
 
 ClapTrap& ClapTrap::operator=( const ClapTrap& claptrap ) {
-    std::cout << "Copy assignment operator called (ClapTrap class)" << '\n';
+    std::cout << "Copy assignment operator called. Class: ClapTrap. Object: " << mName << '\n';
 
     if ( this != &claptrap ) {
         this->mName         = claptrap.mName;
@@ -29,19 +29,19 @@ ClapTrap& ClapTrap::operator=( const ClapTrap& claptrap ) {
 }
 
 ClapTrap::~ClapTrap() {
-    std::cout << "Destructor called (ClapTrap class)" << '\n';
+    std::cout << "Destructor called. Class: ClapTrap. Object: " << mName << '\n';
 }
 
 ClapTrap::ClapTrap( const std::string& initName, unsigned int initHitPoints, unsigned int initEnergyPoints,
                     unsigned int initAttackDamage )
     : mName{ initName }, mHitPoints{ initHitPoints }, mEnergyPoints{ initEnergyPoints },
-      mAttackDamage{ mAttackDamage } {
-    std::cout << "Protected constructor called (ClapTrap class)" << '\n';
+      mAttackDamage{ initAttackDamage } {
+    std::cout << "Protected constructor called. Class: ClapTrap. Object: " << mName << '\n';
 }
 
 void ClapTrap::attack( const std::string& target ) {
     if ( mHitPoints < 1 ) {
-        std::cout << "ClapTrap " << mName << " cannot attack because it is out of hit points" << '\n';
+        std::cout << "ClapTrap " << mName << " cannot attack because it is dead (out of hit points)!" << '\n';
         return;
     } else if ( mEnergyPoints < 1 ) {
         std::cout << "ClapTrap " << mName << "cannot attack because it is out of energy points" << '\n';
@@ -82,4 +82,12 @@ void ClapTrap::beRepaired( unsigned int amount ) {
 
 unsigned int ClapTrap::getAttackDamage() {
     return mAttackDamage;
+}
+
+unsigned int ClapTrap::getHitPoints() {
+    return mHitPoints;
+}
+
+const std::string& ClapTrap::getName() {
+    return mName;
 }
