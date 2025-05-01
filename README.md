@@ -5,21 +5,6 @@
 
 This project is part of the C++ modules at 42 School. The focus of this module is to explore and implement various aspects of class inheritance in C++, including polymorphism, virtual functions, and the challenges of multiple inheritance like the diamond problem.
 
-## Table of Contents
-
-- [C++ Module 03: Inheritance](#c-module-03-inheritance)
-  - [Table of Contents](#table-of-contents)
-  - [Project Overview](#project-overview)
-  - [Exercises](#exercises)
-    - [Exercise 00: Aaaaand... OPEN! (`ClapTrap`)](#exercise-00-aaaaand-open-claptrap)
-    - [Exercise 01: Serena, my love! (`ScavTrap`)](#exercise-01-serena-my-love-scavtrap)
-    - [Exercise 02: Repetitive work (`FragTrap`)](#exercise-02-repetitive-work-fragtrap)
-    - [Exercise 03: Now it’s weird! (`DiamondTrap`)](#exercise-03-now-its-weird-diamondtrap)
-  - [Key Concepts Learned](#key-concepts-learned)
-  - [Implementation Details](#implementation-details)
-  - [Build Instructions](#build-instructions)
-  - [Usage](#usage)
-
 ## Project Overview
 
 The primary goal of this module is to gain a deep understanding of how inheritance works in C++ and how it enables code reuse and polymorphism. Starting with a simple base class `ClapTrap`, the exercises progressively build upon it by creating derived classes (`ScavTrap`, `FragTrap`) with specialized functionalities. The final exercise tackles the complexities of multiple inheritance and the "diamond problem" by implementing a `DiamondTrap` class.
