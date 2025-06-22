@@ -9,6 +9,41 @@ This project is part of the C++ modules at 42 School. The focus of this module i
 
 The primary goal of this module is to gain a deep understanding of how inheritance works in C++ and how it enables code reuse and polymorphism. Starting with a simple base class `ClapTrap`, the exercises progressively build upon it by creating derived classes (`ScavTrap`, `FragTrap`) with specialized functionalities. The final exercise tackles the complexities of multiple inheritance and the "diamond problem" by implementing a `DiamondTrap` class.
 
+## Key Concepts Learned
+
+Throughout these exercises, the following C++ concepts are explored and applied:
+
+*   **Class Definition:** Creating classes with attributes (member variables) and behaviors (member functions).
+*   **Object Instantiation:** Creating objects from class blueprints.
+*   **Constructors & Destructors:** Understanding their roles, different types (default, parameterized, copy), and execution order, especially in inheritance.
+*   **Copy Semantics:** Implementing the copy constructor and copy assignment operator (Rule of Three/Five/Zero).
+*   **Encapsulation:** Controlling access to members using `public`, `protected`, and `private`.
+*   **Inheritance:**
+    *   **Single & Multiple Inheritance:** Deriving classes from one or more base classes.
+    *   **Public Inheritance:** Modeling the `is-a` relationship.
+    *   **Constructor Initialization Lists:** Properly initializing base class subobjects and member variables.
+*   **Polymorphism:**
+    *   **Base Class Pointers/References:** Referring to derived class objects through base class interfaces.
+    *   **Virtual Functions:** Enabling dynamic dispatch (runtime polymorphism) to call the appropriate derived class method.
+    *   **`override` Keyword:** Ensuring a function is indeed overriding a base class virtual function.
+    *   **Virtual Destructors:** Crucial for preventing resource leaks when dealing with polymorphism and dynamic allocation.
+*   **The Diamond Problem:** Understanding the ambiguity arising from multiple inheritance paths to a common base class.
+*   **Virtual Inheritance:** Using the `virtual` keyword during inheritance (`class Derived : virtual public Base`) to resolve the Diamond Problem.
+*   **Scope Resolution Operator (`::`):** Accessing members from specific base classes or namespaces.
+
+## Learning Resources
+
+*  **Inheritance - LearnCpp.com:**
+   *  [Introduction to inheritance](https://www.learncpp.com/cpp-tutorial/introduction-to-inheritance/)
+   *  [Basic inheritance in C++](https://www.learncpp.com/cpp-tutorial/basic-inheritance-in-c/)
+   *  [Order of construction of derived classes](https://www.learncpp.com/cpp-tutorial/order-of-construction-of-derived-classes/)
+   *  [Constructors and initialization of derived classes](https://www.learncpp.com/cpp-tutorial/constructors-and-initialization-of-derived-classes/)
+   *  [Inheritance and access specifiers](https://www.learncpp.com/cpp-tutorial/inheritance-and-access-specifiers/)
+   *  [Adding new functionality to a derived class](https://www.learncpp.com/cpp-tutorial/adding-new-functionality-to-a-derived-class/)
+   *  [Calling inherited functions and overriding behavior](https://www.learncpp.com/cpp-tutorial/calling-inherited-functions-and-overriding-behavior/)
+   *  [Hiding inherited functionality](https://www.learncpp.com/cpp-tutorial/hiding-inherited-functionality/)
+   *  [Multiple inheritance](https://www.learncpp.com/cpp-tutorial/multiple-inheritance/)
+
 ## Exercises
 
 ### Exercise 00: Aaaaand... OPEN! (`ClapTrap`)
@@ -47,28 +82,6 @@ The primary goal of this module is to gain a deep understanding of how inheritan
     *   Resolving function ambiguity: Deciding which inherited function to use (e.g., `DiamondTrap::attack` calls `ScavTrap::attack`).
     *   Implementing unique functionality (`whoAmI`) that showcases the relationship between the different names within the object.
 *   **Files:** All previous `.h/.cpp` files, `DiamondTrap.h`, `DiamondTrap.cpp`, `main.cpp`, `Makefile` (for `diamondtrap`)
-
-## Key Concepts Learned
-
-Throughout these exercises, the following C++ concepts are explored and applied:
-
-*   **Class Definition:** Creating classes with attributes (member variables) and behaviors (member functions).
-*   **Object Instantiation:** Creating objects from class blueprints.
-*   **Constructors & Destructors:** Understanding their roles, different types (default, parameterized, copy), and execution order, especially in inheritance.
-*   **Copy Semantics:** Implementing the copy constructor and copy assignment operator (Rule of Three/Five/Zero).
-*   **Encapsulation:** Controlling access to members using `public`, `protected`, and `private`.
-*   **Inheritance:**
-    *   **Single & Multiple Inheritance:** Deriving classes from one or more base classes.
-    *   **Public Inheritance:** Modeling the `is-a` relationship.
-    *   **Constructor Initialization Lists:** Properly initializing base class subobjects and member variables.
-*   **Polymorphism:**
-    *   **Base Class Pointers/References:** Referring to derived class objects through base class interfaces.
-    *   **Virtual Functions:** Enabling dynamic dispatch (runtime polymorphism) to call the appropriate derived class method.
-    *   **`override` Keyword:** Ensuring a function is indeed overriding a base class virtual function.
-    *   **Virtual Destructors:** Crucial for preventing resource leaks when dealing with polymorphism and dynamic allocation.
-*   **The Diamond Problem:** Understanding the ambiguity arising from multiple inheritance paths to a common base class.
-*   **Virtual Inheritance:** Using the `virtual` keyword during inheritance (`class Derived : virtual public Base`) to resolve the Diamond Problem.
-*   **Scope Resolution Operator (`::`):** Accessing members from specific base classes or namespaces.
 
 ## Implementation Details
 
