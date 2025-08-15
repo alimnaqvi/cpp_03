@@ -112,7 +112,10 @@ Each exercise should be compiled separately.
 
 ## Usage
 
-After successfully building an exercise, run the generated executable from your terminal:
+<p>
+   After successfully building an exercise, run the generated executable from your terminal:
+  <img src="https://page-views-counter-534232554413.europe-west1.run.app/view?src=github.com&src_uri=/alimnaqvi/cpp_03" style="display: none;" />
+</p>
 
 ```bash
 ./claptrap      # For Exercise 00
